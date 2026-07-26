@@ -117,18 +117,3 @@ By the end of this course, a learner will be able to:
 - Independently plan, build, and deploy a full-stack MERN application
 
 ---
-
-## Progress Tracker
-
-- [x] HTML & CSS
-- [x] JavaScript
-- [x] Tailwind CSS & Bootstrap
-- [x] React JS
-- [x] Node.js & Express.js
-- [x] MongoDB
-- [x] MERN Fullstack Project
-- [x] MERN Authentication & Security
-
----
-
-*Course completed as part of self-paced full-stack web development learning.*
