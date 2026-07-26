@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<h2>Login </h2>
+<body>
+    <form action="" >
+
+        <label for="Username">Username:</label>
+        <input type="text" minlength="5" maxlength="10" required placeholder="Enter your username" id="Username" name="Username">
+        <br><br>
+
+        <label for="Password">Password:</label>
+        <input type="password" minlength="8" maxlength="15" required placeholder="Enter your password" id="Password" name="Password" Value="123456789">
+        <br><br>
+
+        <label for="OTP">OTP:</label>
+        <input type="Number" minlength="6" maxlength="6" required placeholder="Enter your OTP" id="OTP" name="OTP">
+        <br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        <br><br>
+
+        <label for="email">Email:</label>       
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <br><br>
+
+        <label for="radiobtn">Gender:</label>
+        <input type="radio" checked="false" id="male" name="gender" value="male">Male <br>
+        <input type="radio" checked="true" id="female" name="gender" value="female">Female
+        <br><br>
+
+        <label for="color">Please select the color:</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+        <label for="feedback">Feedback:</label>
+        <textarea placeholder="Enter feedback" rows="10" cols="100"></textarea>
+        <br><br>
+
+        <label for="Languages">Languages:</label>
+        <select name="Languages">
+            <option value=""></option>
+            <option value="Marathi">Marathi</option>
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+            <option value="Telugu">Telugu</option>
+        </select>
+        <br><br>
+
+        <label for="Class">Class:</label>
+        <input type="checkbox" id="c1" class="FE" value="FE">FE 
+        <input type="checkbox" id="c2" class="SE" value="SE">SE 
+        <input type="checkbox" id="c3" class="TE" value="TE">TE <br> <br>
+        
+
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
