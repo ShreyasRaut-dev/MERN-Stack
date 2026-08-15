@@ -1,0 +1,120 @@
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.chees-gem-wrapper {
+  padding: 27px;
+  background-color: #444;
+  border: 7px dashed magenta;
+  margin: 31px;
+}
+
+.title-text {
+  text-align: center;
+  font-size: 38px;
+  color: #ff00ff;
+  margin-bottom: 23px;
+}
+
+.timers-box {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  padding: 13px;
+  margin-bottom: 19px;
+  border: 3px solid cyan;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.timer.active {
+  color: #ff00ff;
+}
+
+.check-banner {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 21px;
+  text-align: center;
+  padding: 11px;
+  margin-bottom: 19px;
+  border: 3px solid yellow;
+}
+
+.game-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.chess-bored {
+  width: 440px;
+  height: 440px;
+  border: 10px solid yellow;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.square {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.cyan-square {
+  background-color: cyan;
+  color: black;
+}
+
+.yellow-square {
+  background-color: yellow;
+  color: black;
+}
+
+.square.selected-square {
+  background-color: red !important;
+  color: white;
+}
+
+.side-panel {
+  width: 250px;
+  background-color: #222;
+  border: 4px solid cyan;
+  padding: 12px;
+  margin-left: 23px;
+}
+
+.moves-list {
+  height: 250px;
+  overflow-y: scroll;
+  border: 2px solid yellow;
+  padding: 9px;
+  background-color: #111;
+  font-family: monospace;
+}
+
+.undoo-btn {
+  background-color: #ff00ff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 14px;
+  width: 100%;
+}

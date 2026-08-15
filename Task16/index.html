@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map and Filter Studnt Exrcise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="headr-barr">
+    <div class="usr-name">Hi, Usrname</div>
+    <button class="logn-btn">Logn</button>
+  </div>
+
+  <div class="serch-section">
+    <input type="text" id="serch-inpt" placeholder="Serch studnts..." oninput="filterrStudnts()">
+    <button class="serch-btn" onclick="filterrStudnts()">Serch</button>
+  </div>
+
+  <div class="resuts-title">
+    <h2>Serch Resuts for "<span id="serch-query"></span>"</h2>
+  </div>
+
+  <div class="crads-container" id="crads-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

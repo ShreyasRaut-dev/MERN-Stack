@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppName - Build Amazing Products Faster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <nav class="sticky top-0 z-50 bg-white p-4 flex justify-between items-center shadow">
+    <div class="font-bold text-lg">AppName</div>
+    <div class="hidden md:flex space-x-4">
+      <a href="#features" class="hover:text-blue-500">Features</a>
+      <a href="#" class="hover:text-blue-500">Pricing</a>
+      <a href="#" class="hover:text-blue-500">About</a>
+      <a href="#" class="hover:text-blue-500">Contact</a>
+    </div>
+    <button class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded">Get Started</button>
+    <button id="mobile-menu-btn" class="md:hidden text-base font-semibold border px-2 py-1 rounded">Menu</button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden bg-white p-4 space-y-2 border-b">
+    <a href="#features" class="block hover:text-blue-500">Features</a>
+    <a href="#" class="block hover:text-blue-500">Pricing</a>
+    <a href="#" class="block hover:text-blue-500">About</a>
+    <a href="#" class="block hover:text-blue-500">Contact</a>
+    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded">Get Started</button>
+  </div>
+
+  <div class="bg-gradient-to-r from-blue-100 to-indigo-100 p-8">
+    <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+      <div class="w-full lg:w-1/2">
+        <h1 class="text-3xl md:text-5xl font-bold">Build Amazing Products Faster</h1>
+        <p class="text-gray-700 my-4">AppName is a modern SaaS platform designed to help teams build, collaborate, and launch products efficiently.</p>
+        <div class="flex gap-4">
+          <button class="bg-blue-600 text-white px-6 py-3 rounded">Start Free Trial</button>
+          <button class="bg-white border border-gray-300 px-6 py-3 rounded">Watch Demo</button>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <img class="h-48 sm:h-64 md:h-80 lg:h-96 w-full object-cover rounded shadow-lg" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500" alt="Workspace">
+      </div>
+    </div>
+  </div>
+
+  <div class="p-8 bg-white" id="features">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-8">Powerful Features.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-lg mb-2">Lightning Fast</h3>
+          <p class="text-gray-600">Optimized for speed and performance.</p>
+        </div>
+        <div class="border p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-lg mb-2">Secure</h3>
+          <p class="text-gray-600">Enterprise grade security built in.</p>
+        </div>
+        <div class="border p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-lg mb-2">Analytics</h3>
+          <p class="text-gray-600">Real time insights and reports.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gray-800 text-gray-400 p-8">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="font-bold text-white">AppName</div>
+      <div class="text-sm">2026 AppName. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("mobile-menu-btn").addEventListener("click", function() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

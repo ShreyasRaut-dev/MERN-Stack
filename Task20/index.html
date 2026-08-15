@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundery Servicess Web App</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+  <nav class="navbar-barr">
+    <div class="nav-logo">Laundery Servicess</div>
+    <div class="nav-linkss">
+      <a href="#hero">Home</a>
+      <a href="#booking">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#newsletter">Contact Us</a>
+    </div>
+    <div class="nav-user">
+      <span class="user-display">Shreyas Raut</span>
+    </div>
+  </nav>
+
+  <div class="hero-sectin" id="hero">
+    <div class="hero-lefft">
+      <h1>Expert Laundery Servicess for You</h1>
+      <p>Get your clothes cleaned by experts. We wash, dry, iron, and deliver back to you in record time. Professional handling for all fabric types.</p>
+      <button class="btn-hero-book" onclick="scrollToBooking()">Book a Service Today</button>
+    </div>
+    <div class="hero-rigth">
+      <img src="laundry_hero.png" alt="Laundry Service Image">
+    </div>
+  </div>
+
+  <div class="acheivements-sectin" id="about">
+    <div class="ach-box">
+      <h2>15+</h2>
+      <p>Laundery Services</p>
+    </div>
+    <div class="ach-box">
+      <h2>240+</h2>
+      <p>Happy Customers</p>
+    </div>
+    <div class="ach-box">
+      <h2>2+</h2>
+      <p>Years of Experience</p>
+    </div>
+  </div>
+
+  <div class="booking-sectin" id="booking">
+    <div class="booking-left-div">
+      <h3>Available Services</h3>
+      
+      <div class="service-item" id="srv-dry">
+        <div class="srv-info">
+          <span class="srv-name">Dry Cleaning</span>
+          <span class="srv-price">₹200</span>
+        </div>
+        <div class="srv-actions">
+          <button class="add-item-btn" onclick="addService('dry')">Add Items</button>
+          <button class="remove-item-btn" onclick="removeService('dry')">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="service-item" id="srv-wash">
+        <div class="srv-info">
+          <span class="srv-name">Wet Wash</span>
+          <span class="srv-price">₹100</span>
+        </div>
+        <div class="srv-actions">
+          <button class="add-item-btn" onclick="addService('wash')">Add Items</button>
+          <button class="remove-item-btn" onclick="removeService('wash')">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="service-item" id="srv-iron">
+        <div class="srv-info">
+          <span class="srv-name">Ironing</span>
+          <span class="srv-price">₹50</span>
+        </div>
+        <div class="srv-actions">
+          <button class="add-item-btn" onclick="addService('iron')">Add Items</button>
+          <button class="remove-item-btn" onclick="removeService('iron')">Remove Now</button>
+        </div>
+      </div>
+
+      <div class="bottom-helper-txt">
+        Add items to the cart
+      </div>
+    </div>
+
+    <div class="booking-right-div">
+      <div class="cart-items-box">
+        <h4>Cart Overview</h4>
+        <ul id="cart-list">
+          <li class="empty-msg">No added items.</li>
+        </ul>
+        <div class="total-box">
+          Totl Amout: ₹<span id="totlAmout">0</span>
+        </div>
+      </div>
+
+      <div class="book-form-box">
+        <h3>Bookk Now</h3>
+        <form id="booking-details-form" onsubmit="event.preventDefault(); sndEmail();">
+          <div class="form-field">
+            <label>Full Name</label>
+            <input type="text" id="user-name" required>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" id="user-email" required>
+          </div>
+          <div class="form-field">
+            <label>Phone Number</label>
+            <input type="tel" id="user-phone" required>
+          </div>
+          <button type="submit" class="submit-booking-btn">Bookk Now</button>
+        </form>
+        <div class="booking-confirm-msg" id="confirm-msg"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quality-sectin">
+    <h3>Why Choose Us?</h3>
+    <div class="quality-grid">
+      <div class="quality-card">
+        <h5>Premium Services</h5>
+        <p>We use high-grade detergents and state-of-the-art machines.</p>
+      </div>
+      <div class="quality-card">
+        <h5>Quick Support</h5>
+        <p>Our team is always online to resolve any service queries.</p>
+      </div>
+      <div class="quality-card">
+        <h5>Timely Delivery</h5>
+        <p>Freshly cleaned clothes returned to your doorstep in 24 hours.</p>
+      </div>
+      <div class="quality-card">
+        <h5>Affordable Prices</h5>
+        <p>Best cleaning quality in town at competitive, budget-friendly rates.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="newsletter-sectin" id="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <form id="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <button type="submit" class="subscribe-btn">Subscibe</button>
+    </form>
+  </div>
+
+  <footer class="footer-sectin">
+    <div class="footer-col">
+      <h5>Laundery Servicess</h5>
+      <p>Clean clothes, fresh life. We take care of your laundry day in and day out.</p>
+    </div>
+    <div class="footer-col">
+      <h5>About Us</h5>
+      <a href="#about">Our Story</a>
+      <a href="#about">Achievements</a>
+    </div>
+    <div class="footer-col">
+      <h5>Important Links</h5>
+      <a href="#hero">Home</a>
+      <a href="#booking">Services</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <p>Email: info@launderyservices.com</p>
+      <p>Phone: +1 234 567 890</p>
+    </div>
+    <div class="footer-col">
+      <h5>Social Media</h5>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

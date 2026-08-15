@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sanserif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.5;
+}
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 15px 5%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+}
+.logo {
+  display: inline-block;
+  width: 25%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2563eb;
+  vertical-align: middle
+}
+.nav-links {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.nav-links a {
+  color: #475569;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover {
+  color: #2563eb;
+}
+.user-profile {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: #334155;
+  vertical-align: middle;
+}
+.hero {
+  height: 75vh;
+  padding: 0 5%;
+  font-size: 0;
+  background-color: #f8fafc;
+}
+.hero-left {
+  display: inline-block;
+  width: 45%;
+  vertical-align: middle;
+  font-size: 16px;
+  padding-right: 40px;
+  text-align: left;
+}
+.hero-left h1 {
+  font-size: 38px;
+  color: #1e293b;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.hero-left p {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+.hero-right {
+  display: inline-block;
+  width: 55%;
+  vertical-align: middle;
+  font-size: 16px;
+  text-align: right;
+}
+.hero-right img {
+  width: 100%;
+  height: auto;
+  max-height: 55vh;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.hero::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.btn-book {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+.btn-bok:hover {
+  background-color: #1d4ed8;
+}

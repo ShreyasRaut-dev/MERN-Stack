@@ -1,0 +1,131 @@
+body {
+  background-color: #ffd700;
+  color: #8b0000;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.scehma-app-body {
+  padding: 31px;
+}
+
+.title-txt {
+  text-align: center;
+  font-size: 47px;
+  color: #800080;
+}
+
+.eror-banner {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  border: 4px solid black;
+  margin-bottom: 25px;
+}
+
+.forms-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 9px;
+  margin-bottom: 35px;
+}
+
+.usser-form-box {
+  background-color: brown;
+  color: yellow;
+  padding: 27px;
+  border: 15px solid cyan;
+  width: 44%;
+}
+
+.usser-input {
+  width: 140px;
+  padding: 18px;
+  display: block;
+  margin-bottom: 12px;
+  border: 2px solid black;
+}
+
+.usser-email-input {
+  width: 250px;
+  padding: 6px;
+  display: block;
+  margin-bottom: 12px;
+  border: 8px solid magenta;
+}
+
+.usser-btn {
+  background-color: green;
+  color: white;
+  padding: 14px;
+  font-size: 21px;
+  border: none;
+}
+
+.pots-form-box {
+  background-color: navy;
+  color: white;
+  padding: 19px;
+  border: 9px solid orange;
+  width: 44%;
+}
+
+.pots-title-input {
+  width: 90%;
+  padding: 2px;
+  font-size: 19px;
+  display: block;
+  margin-bottom: 9px;
+}
+
+.pots-content-area {
+  width: 60%;
+  height: 120px;
+  padding: 13px;
+  display: block;
+  margin-bottom: 9px;
+}
+
+.usser-select {
+  padding: 11px;
+  font-size: 17px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.pots-btn {
+  background-color: orange;
+  color: black;
+  padding: 9px;
+  font-size: 15px;
+}
+
+.squished-pots-list {
+  background-color: #222;
+  color: #fff;
+  padding: 3px;
+  border: 3px dashed black;
+}
+
+.squished-pots-item {
+  border-bottom: 1px solid white;
+  margin-bottom: 2px;
+  padding: 2px;
+}
+
+.squished-pots-item h4 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.squished-pots-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.pots-author {
+  font-size: 11px;
+  color: #ffeb3b;
+}

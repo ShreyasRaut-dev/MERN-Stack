@@ -1,0 +1,103 @@
+body {
+  background-color: #f5e6d3;
+  margin: 0;
+  padding: 0;
+}
+
+.store-body {
+  padding: 12px;
+  background-color: #ffd700;
+  margin-top: 45px;
+  margin-left: 23px;
+  margin-right: 17px;
+  border: 4px solid #8b5a2b;
+}
+
+.store-title {
+  font-family: serif;
+  color: #5c3a21;
+  font-size: 47px;
+  margin-bottom: 33px;
+  text-align: center;
+}
+
+.layout-containr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.left-side {
+  width: 53%;
+  background-color: #8b5a2b;
+  color: white;
+  padding: 19px 7px 37px 22px;
+  margin-left: 11px;
+}
+
+.shoes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.shooe-card {
+  background-color: #fff8dc;
+  color: black;
+  border: 3px solid #ff8c00;
+  padding: 14px 21px 11px 9px;
+  margin-right: 13px;
+}
+
+.shooe-card img {
+  border: 2px solid brown;
+}
+
+.add-btn {
+  background-color: #ff8c00;
+  color: white;
+  padding: 9px 17px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.right-side {
+  width: 38%;
+  background-color: #ffeb3b;
+  border: 5px solid brown;
+  padding: 31px 13px 18px 24px;
+  margin-left: 7px;
+}
+
+.cart-list {
+  padding-left: 11px;
+}
+
+.cart-item {
+  background-color: white;
+  border: 1px solid #777;
+  padding: 8px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remve-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.cart-total {
+  background-color: #ffe4c4;
+  padding: 13px;
+  margin-top: 19px;
+  border: 2px dashed red;
+}

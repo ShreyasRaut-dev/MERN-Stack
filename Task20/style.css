@@ -1,0 +1,394 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafbfc;
+  color: #333;
+}
+
+.navbar-barr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3799;
+  color: white;
+  padding: 13px 28px 9px 18px;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-linkss a {
+  color: #dcdde1;
+  text-decoration: none;
+  margin-right: 21px;
+  font-size: 14px;
+}
+
+.nav-linkss a:hover {
+  color: white;
+}
+
+.nav-user {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero-sectin {
+  display: flex;
+  align-items: center;
+  padding: 35px 23px 29px 41px;
+  background-color: #f5f6fa;
+  margin-bottom: 27px;
+  border-bottom: 2px solid #ddd;
+}
+
+.hero-lefft {
+  width: 48%;
+  padding-right: 17px;
+}
+
+.hero-lefft h1 {
+  font-size: 36px;
+  color: #2f3542;
+  margin-bottom: 14px;
+}
+
+.hero-lefft p {
+  font-size: 15px;
+  color: #57606f;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.btn-hero-book {
+  background-color: #e84118;
+  color: white;
+  border: none;
+  padding: 11px 23px 13px 19px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.hero-rigth {
+  width: 52%;
+  text-align: right;
+}
+
+.hero-rigth img {
+  width: 90%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 4px solid #1e3799;
+}
+
+.acheivements-sectin {
+  display: flex;
+  justify-content: space-around;
+  background-color: #353b48;
+  color: white;
+  padding: 27px 11px 18px 29px;
+  margin-bottom: 23px;
+}
+
+.ach-box {
+  text-align: center;
+}
+
+.ach-box h2 {
+  font-size: 32px;
+  margin: 0 0 6px 0;
+  color: #fbc531;
+}
+
+.ach-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #f5f6fa;
+}
+
+.booking-sectin {
+  display: flex;
+  margin: 14px 21px 31px 14px;
+  gap: 13px;
+  padding: 11px 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.booking-left-div {
+  width: 53%;
+  border-right: 2px dashed #ddd;
+  padding-right: 23px;
+}
+
+.booking-left-div h3 {
+  margin-top: 0;
+  margin-bottom: 19px;
+  color: #2f3542;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e1b12c;
+  padding: 9px 14px 7px 18px;
+  margin-bottom: 13px;
+  background-color: #fcf8e3;
+}
+
+.srv-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.srv-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.srv-price {
+  font-size: 13px;
+  color: #e84118;
+}
+
+.srv-actions {
+  display: flex;
+  gap: 9px;
+}
+
+.add-item-btn {
+  background-color: #4cd137;
+  color: white;
+  border: none;
+  padding: 5px 11px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.remove-item-btn {
+  background-color: #c23616;
+  color: white;
+  border: none;
+  padding: 5px 11px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.bottom-helper-txt {
+  font-size: 13px;
+  color: #718093;
+  margin-top: 19px;
+  font-style: italic;
+}
+
+.booking-right-div {
+  width: 47%;
+  padding-left: 9px;
+}
+
+.cart-items-box {
+  background-color: #f5f6fa;
+  border: 1px solid #ddd;
+  padding: 13px 21px 17px 11px;
+  margin-bottom: 23px;
+}
+
+.cart-items-box h4 {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+#cart-list {
+  padding-left: 17px;
+  margin-bottom: 14px;
+}
+
+#cart-list li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.empty-msg {
+  list-style-type: none;
+  color: #718093;
+  margin-left: -12px;
+}
+
+.total-box {
+  font-weight: bold;
+  font-size: 15px;
+  border-top: 1px dashed #ccc;
+  padding-top: 9px;
+}
+
+.book-form-box {
+  border: 1px solid #ccc;
+  padding: 19px 13px 22px 28px;
+  background-color: #fafafa;
+}
+
+.book-form-box h3 {
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.form-field {
+  margin-bottom: 11px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.form-field input {
+  width: 88%;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.submit-booking-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 7px 18px 9px 17px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 9px;
+}
+
+.booking-confirm-msg {
+  font-weight: bold;
+  color: #27ae60;
+  margin-top: 13px;
+  font-size: 13px;
+}
+
+.quality-sectin {
+  background-color: #f1f2f6;
+  padding: 27px 19px 38px 23px;
+  margin-top: 27px;
+  border-top: 1px solid #ddd;
+}
+
+.quality-sectin h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.quality-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 13px;
+}
+
+.quality-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 210px;
+  padding: 13px 18px 19px 11px;
+  border-radius: 4px;
+}
+
+.quality-card h5 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: 15px;
+  color: #1e3799;
+}
+
+.quality-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #57606f;
+}
+
+.newsletter-sectin {
+  background-color: #2f3542;
+  color: white;
+  text-align: center;
+  padding: 31px 18px 27px 42px;
+}
+
+.newsletter-sectin h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+#subscribe-form input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  margin-right: 9px;
+  width: 220px;
+}
+
+.subscribe-btn {
+  padding: 8px 18px;
+  background-color: #fbc531;
+  color: #333;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-sectin {
+  background-color: #1e272e;
+  color: #dcdde1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 33px 14px 19px 27px;
+  border-top: 4px solid #ff5722;
+}
+
+.footer-col {
+  width: 17%;
+  margin-bottom: 14px;
+  vertical-align: top;
+}
+
+.footer-col:first-child {
+  width: 23%;
+  margin-top: 7px;
+}
+
+.footer-col h5 {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 15px;
+  color: white;
+}
+
+.footer-col p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.footer-col a {
+  display: block;
+  color: #a4b0be;
+  text-decoration: none;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.footer-col a:hover {
+  color: white;
+}

@@ -1,0 +1,69 @@
+FlowApp To-Do List API Documentation
+
+1. GET ALL TASKS
+   - Endpoint: GET /api/tasks
+   - Description: Retrieves a list of all to-do tasks.
+   - Request Headers: 
+     - Content-Type: application/json
+   - Request Body: None
+   - Response:
+     - Status: 200 OK
+     - Body: Array of Task objects, e.g.
+       [
+         { "_id": "1", "title": "Buy groceries", "completed": false },
+         { "_id": "2", "title": "Clean kitchen", "completed": true }
+       ]
+
+2. GET SINGLE TASK BY ID
+   - Endpoint: GET /api/tasks/:id
+   - Description: Retrieves details of a single task by its unique identifier.
+   - Request Headers:
+     - Content-Type: application/json
+   - Request Body: None
+   - Response:
+     - Status: 200 OK
+     - Body:
+       { "_id": "1", "title": "Buy groceries", "completed": false }
+     - Error Response:
+       - Status: 404 Not Found (if task ID does not exist)
+
+3. CREATE A NEW TASK
+   - Endpoint: POST /api/tasks
+   - Description: Creates a new to-do task.
+   - Request Headers:
+     - Content-Type: application/json
+   - Request Body:
+     { "title": "Learn React" }
+   - Response:
+     - Status: 201 Created
+     - Body:
+       { "_id": "3", "title": "Learn React", "completed": false }
+     - Error Response:
+       - Status: 400 Bad Request (if title is missing)
+
+4. UPDATE A TASK
+   - Endpoint: PUT /api/tasks/:id
+   - Description: Updates the details or status of an existing task.
+   - Request Headers:
+     - Content-Type: application/json
+   - Request Body:
+     { "title": "Learn React Today", "completed": true }
+   - Response:
+     - Status: 200 OK
+     - Body:
+       { "_id": "3", "title": "Learn React Today", "completed": true }
+     - Error Response:
+       - Status: 404 Not Found (if task ID does not exist)
+
+5. DELETE A TASK
+   - Endpoint: DELETE /api/tasks/:id
+   - Description: Deletes a task from the database.
+   - Request Headers:
+     - Content-Type: application/json
+   - Request Body: None
+   - Response:
+     - Status: 200 OK
+     - Body:
+       { "success": true, "message": "Task successfully deleted" }
+     - Error Response:
+       - Status: 404 Not Found (if task ID does not exist)

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Booking Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar-barr">
+    <div class="nav-logo">Navigaton Logo</div>
+    <div class="nav-linkss">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="nav-user">
+      <span class="user-display">Shreyas Raut</span>
+      <button class="logout-btn" onclick="alert('Logged out!')">Logout</button>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <div class="left-sectin">
+      <div class="cart-box">
+        <h3>Added Services</h3>
+        <ul id="cart-list">
+          <li class="empty-msg">No items have been added.</li>
+        </ul>
+        <div class="total-row">
+          Toal Amout: ₹<span id="toalAmt">0</span>
+        </div>
+      </div>
+
+      <div class="booking-form-box">
+        <h3>Bok Now</h3>
+        <form id="book-form" onsubmit="event.preventDefault(); handleFormBooking();">
+          <div class="input-grp">
+            <label>Full Name</label>
+            <input type="text" id="cust-name" required>
+          </div>
+          <div class="input-grp">
+            <label>Email</label>
+            <input type="email" id="cust-email" required>
+          </div>
+          <div class="input-grp">
+            <label>Password</label>
+            <input type="password" id="cust-pass" required>
+          </div>
+          <button type="submit" class="form-book-btn">Bok Now</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h2>Brose Srvices</h2>
+      <p class="srv-desc">Welcome! Browse our premium cleaning options. Select what you need and click add to cart at the bottom.</p>
+
+      <div class="services-grid">
+        <div class="service-card" id="card-dry">
+          <img src="service.png" alt="Dry Cleaning">
+          <h4>Dry Cleaning</h4>
+          <p class="price-lbl">₹200.00</p>
+          <div class="card-btns">
+            <button class="skip-btn" onclick="selectService('dry', false)">Skip Item</button>
+            <button class="add-btn" onclick="selectService('dry', true)">Add Item</button>
+          </div>
+        </div>
+
+        <div class="service-card" id="card-wet">
+          <img src="service.png" alt="Wet Wash">
+          <h4>Wet Wash</h4>
+          <p class="price-lbl">₹100.00</p>
+          <div class="card-btns">
+            <button class="skip-btn" onclick="selectService('wet', false)">Skip Item</button>
+            <button class="add-btn" onclick="selectService('wet', true)">Add Item</button>
+          </div>
+        </div>
+
+        <div class="service-card" id="card-iron">
+          <img src="service.png" alt="Ironing & Folding">
+          <h4>Ironing & Folding</h4>
+          <p class="price-lbl">₹50.00</p>
+          <div class="card-btns">
+            <button class="skip-btn" onclick="selectService('iron', false)">Skip Item</button>
+            <button class="add-btn" onclick="selectService('iron', true)">Add Item</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-cart-info">
+        <div class="selection-status" id="select-status">Selected: None</div>
+        <div class="action-row">
+          <button class="action-add-btn" onclick="addSelectedToCart()">Add to Cart</button>
+          <button class="action-book-btn" onclick="bookSelectedImmediately()">Bok Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

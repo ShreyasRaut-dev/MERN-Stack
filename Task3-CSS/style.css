@@ -1,0 +1,36 @@
+body {
+    background-color: #2c3e50;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.head {
+    color: darkblue;
+}
+
+#bglime {
+    background-color: lime;
+}
+
+.head span {
+    color: red;
+}
+
+p {
+    color: white;
+}
+
+
+#para {
+    color: green;
+}
+
+#para span {
+    color: black;
+    font-size: larger;
+}
+
+li span {
+    color: gold;
+    font-weight: bold;
+}

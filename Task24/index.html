@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations & UI Feedback - Interactive UI Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            fadein: 'fadeInUp 0.6s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans">
+  <header class="py-16 px-6 text-center border-b border-slate-900">
+    <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
+      Animations & UI Feedback
+    </h1>
+    <p class="text-slate-400 text-lg max-w-xl mx-auto">
+      Interact with the elements below to experience smooth state transitions, micro-interactions, and responsive feedback.
+    </p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-20">
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-300">Section 1: Built-in Animations</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between h-48">
+          <div class="flex items-center justify-center h-16">
+            <svg class="animate-spin h-8 w-8 text-indigo-500" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm">animate-spin</h3>
+            <p class="text-slate-500 text-xs mt-1">Spinning SVG loading wheel for progress indicators.</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between h-48">
+          <div class="flex items-center justify-center h-16">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+            </span>
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm">animate-ping</h3>
+            <p class="text-slate-500 text-xs mt-1">Pulsing circle effect perfect for live badges.</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between h-48">
+          <div class="flex items-center justify-center h-16 w-full px-4">
+            <div class="animate-pulse flex space-x-3 w-full">
+              <div class="rounded-full bg-slate-700 h-8 w-8"></div>
+              <div class="flex-1 space-y-2 py-1">
+                <div class="h-2 bg-slate-700 rounded w-3/4"></div>
+                <div class="h-2 bg-slate-700 rounded w-1/2"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm">animate-pulse</h3>
+            <p class="text-slate-500 text-xs mt-1">Skeleton screen fading animation for lazy loading.</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between h-48">
+          <div class="flex items-center justify-center h-16">
+            <svg class="animate-bounce h-8 w-8 text-violet-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-white text-sm">animate-bounce</h3>
+            <p class="text-slate-500 text-xs mt-1">Bouncing motion for scrolls and directional cues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-300">Section 2: Button Animations</h2>
+      <div class="flex flex-wrap gap-4 justify-start">
+        <button class="transition transform hover:scale-110 duration-200 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2.5 rounded-xl shadow-md text-sm">
+          Scale Hover
+        </button>
+
+        <button class="transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-violet-500/20 duration-200 bg-violet-600 text-white font-semibold px-5 py-2.5 rounded-xl text-sm">
+          Shadow & Scale
+        </button>
+
+        <button class="transition-colors duration-500 hover:bg-emerald-500 bg-slate-900 border border-slate-800 text-slate-200 font-semibold px-5 py-2.5 rounded-xl text-sm">
+          Bg Transition
+        </button>
+
+        <button class="transition transform hover:rotate-6 duration-200 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm">
+          Rotate Hover
+        </button>
+
+        <button class="transition transform hover:-translate-y-1.5 duration-200 bg-pink-600 hover:bg-pink-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm">
+          Translate Lift
+        </button>
+
+        <button class="transition-all transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/20 active:scale-95 duration-200 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm">
+          Combined & Active
+        </button>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-300">Section 3: Card Animations</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10 hover:border-slate-700 cursor-pointer">
+          <h3 class="text-lg font-bold text-white mb-2">Hover Lift</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            This card lifts upward and gains an expanded soft indigo glow shadow when hovered.
+          </p>
+        </div>
+
+        <div class="group bg-slate-900 border border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:border-slate-700 cursor-pointer">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-bold text-white">Scale & Rotate</h3>
+            <svg class="h-6 w-6 text-slate-500 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Hovering anywhere on this card triggers a scale and rotation transition on the settings icon using group-hover.
+          </p>
+        </div>
+
+        <div class="relative overflow-hidden bg-slate-900 border border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:border-violet-500 cursor-pointer">
+          <h3 class="text-lg font-bold text-white mb-2">Border Reveal</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            This card reveals a vibrant violet border coloring when active or hovered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-300">Section 4: Notification Badges</h2>
+      <div class="flex gap-16 justify-center bg-slate-900/50 border border-slate-900 py-8 rounded-2xl">
+        <div class="relative inline-block">
+          <svg class="h-8 w-8 text-slate-400 hover:text-slate-200 transition-colors cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span class="absolute top-0 right-0 flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+          </span>
+        </div>
+
+        <div class="relative inline-block">
+          <svg class="h-8 w-8 text-slate-400 hover:text-slate-200 transition-colors cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          <span class="animate-pulse absolute -top-2 -right-2 bg-violet-600 text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center">
+            4
+          </span>
+        </div>
+
+        <div class="relative inline-block">
+          <svg class="h-8 w-8 text-slate-400 hover:text-slate-200 transition-colors cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span class="absolute -top-2 -right-2 bg-emerald-500 text-white text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
+            9+
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-300">Section 5: Loading States</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="animate-pulse bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="h-4 bg-slate-700 rounded w-1/3"></div>
+          <div class="space-y-2">
+            <div class="h-3 bg-slate-800 rounded"></div>
+            <div class="h-3 bg-slate-800 rounded w-5/6"></div>
+          </div>
+          <div class="flex items-center space-x-3 mt-4">
+            <div class="rounded-full bg-slate-800 h-9 w-9"></div>
+            <div class="flex-1 space-y-2">
+              <div class="h-2 bg-slate-800 rounded w-1/2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button class="inline-flex items-center gap-3 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl active:scale-95 transition-transform duration-150 text-sm">
+            <svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Loading...
+          </button>
+        </div>
+
+        <div class="flex items-center justify-center space-x-2">
+          <div class="w-3 h-3 bg-violet-500 rounded-full animate-bounce"></div>
+          <div class="w-3 h-3 bg-violet-500 rounded-full animate-bounce [animation-delay:150ms]"></div>
+          <div class="w-3 h-3 bg-violet-500 rounded-full animate-bounce [animation-delay:300ms]"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-300">Section 6: Staggered Animations</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="opacity-0 animate-fadein bg-slate-900 border border-slate-800 rounded-2xl p-6 h-36 flex flex-col justify-between">
+          <h4 class="text-white font-bold text-sm">Delay 0ms</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">Appears instantly upon container element loading sequence initialization.</p>
+        </div>
+
+        <div class="opacity-0 animate-fadein [animation-delay:150ms] bg-slate-900 border border-slate-800 rounded-2xl p-6 h-36 flex flex-col justify-between">
+          <h4 class="text-white font-bold text-sm">Delay 150ms</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">Appears with a brief offset transition, maintaining page entry flow.</p>
+        </div>
+
+        <div class="opacity-0 animate-fadein [animation-delay:300ms] bg-slate-900 border border-slate-800 rounded-2xl p-6 h-36 flex flex-col justify-between">
+          <h4 class="text-white font-bold text-sm">Delay 300ms</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">Follows sequentially, building an interactive layered entrance sweep.</p>
+        </div>
+
+        <div class="opacity-0 animate-fadein [animation-delay:450ms] bg-slate-900 border border-slate-800 rounded-2xl p-6 h-36 flex flex-col justify-between">
+          <h4 class="text-white font-bold text-sm">Delay 450ms</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">The final block fades in, completing the staggered loading demonstration.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 px-6 border-t border-slate-900 text-center text-slate-600 text-xs mt-12">
+    &copy; 2026 Animations & UI Feedback. All rights reserved.
+  </footer>
+</body>
+</html>
