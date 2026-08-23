@@ -1,16 +1,11 @@
-import React from 'react'
-import Navbar from './components/Navbar.jsx'
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="app-container">
+    <div>
       <Navbar />
-      <div className="main-content">
-        <h2>Welcom to the Website</h2>
-        <p>This is a simple template displaying the responsive navbar behaviour.</p>
-      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
